@@ -1,0 +1,90 @@
+folder swich krne k liye command+o
+
+node <file name> : - terminal pe output dekh sakte ho 
+
+package kya h 
+ek aisa code jo humne nhi likha kisi aur developer likha h aur use public available kr diye jisse aur developer uska use kr paye 
+
+ab tum is package ko dekh sakte ho 
+npmjs.com pe 
+npm ki website pr jo code h use apne system me lana install kahlata h 
+
+npm i cat-me 
+const catMe = require('cat-me');
+console.log(catMe());
+
+package.json -js code kis kis package pe depend karta h uske baare me information deta h
+
+node-modules - jo package install karte hai uska jo code hota hai wo yaha store hota hai
+
+package-lock.json -> package  kisi pe depend krta hai,, kya package k ander koi aur package hai yadi hai to  kya wo kisi aur pe depned krta hai yadi hm to use bhi lao esko mentain karta hai package-lock.json
+
+
+different between package.json & package-lock.json
+
+package.json ye batata hai jo tumne require kiya wo kispe depend krta hai 
+
+package-lock.json ye batata h ki ek package kisi aur package pe depned krta hai agr krta hai to use bhi lao 
+
+server - server ek machine h jiske pass khud ka operting system h , khud ka prosesr h , khud ki ram ya storezge h 
+server ko es prakar se program kiya jata h ki client jo reques bhejega uska proper  reponse mil sake 
+
+
+npm init -y --- ye batati h ki isme aage jake nodejs ki application banegi 
+
+express ek package h jo server banane me help karta h
+npm i express
+
+
+
+day-2
+const express = require('express')
+const app = express()//server instance create karna 
+app.get('/',(req,res)=>{
+    res.send('hello world')//client ko response send krna
+})
+app.listen(3000)//server start krta 
+
+node server.js -> terminal me run krna
+http://localhost:3000/about
+
+chaimen = 110
+director = 111  
+
+port no --
+
+3000
+8080
+8000
+7000
+5173
+
+node server.js =>ise use kro 
+
+npx nodemon server.js.    http://render.com/
+
+
+
+
+day-3
+what is api -> a set of rules and protocall that enables different software applications to communicate with each other. It defines how requests and responses should be structured, allowing developers to interact with external services, access data, or perform specific functions without needing to understand the underlying code or infrastructure. APIs can be used for various purposes, such as retrieving data from a server, integrating third-party services, or enabling communication between different software components. 
+
+ex- 2 alag alag software h
+ye kuchh bhi ho sakte hai 
+- app of intragram who is install in your phone 
+- ek intragram ka server jo backend pe kahi run ho raha hoga 
+
+2 application aps me communicate krte h way api usme kucch rule hote hai kuchh potocall hote h 
+
+RIST API -jo protocall use kiya jayega wo protocall rahega http,https en dono me se koi ek hi ek time pe use kiya jayega 
+agar frontend aur backend ko communicate krna h to jo protocall use kiya jayega wo http hoga ya fir https hoga 
+
+2rule - cammunication kis type ka kr rahe ho uske base pe method deside hogi 
+
+method 
+1.get - server se kuchh bhi mgwa rahe ho frontend side pe to waha pe get method use ki jayegi 
+2.post - server side jb kuchhh resources create kr rahe ho 
+frontend se kuchh aisi request kr rahe ho jisse backend(server) pe kuchh create hoga wo kuchh bhi ho sakta h - user ka accout create ho sakta h uska post create ho sakta h ,user ek product create kr sakta h  ,user ek commet create kr sakta h 
+3.put - jb server pe resouce allready tha to use update krne me 
+4.patch -jb kuchh thoda part update krna ho 
+5.delete - jb server pe resorce h allready to use delete krne me 
