@@ -1,0 +1,74 @@
+1. mkdir se folder banao 
+ex - mkdir day-5
+
+2. command + o us folder ko open kr lo new window pe 
+
+3. npm init -y -> ise pta chalta hai ki aage jake node aplication banegi 
+
+4. npm i express -> express ko install krte hai apne system pe 
+
+-> package.json file me jao waha ek script tag hoga use ek new command banao 
+
+ex- 
+
+"dev":"npx nodemon server.js"
+
+jb tum npm run dev karoge to npx nodemon server.js command run hogi 
+
+5. ab ek src folder banao day-5 k ander uske ander ek app.js folder banao 
+
+
+6. server.js file banao day-5 k ander 
+
+ab step 5 pe jao 
+
+a.
+
+require kro express ko aur use kisi variable me store kro 
+
+ex - 
+
+const express = require('express')
+
+b. 
+
+express ko call kro use fir ek variable me store kro 
+
+ex 
+const app = express()
+
+c. 
+is app exports kro 
+ex
+
+
+module.exports = app
+
+
+step 6 pe jao 
+
+a.
+app.js se jo exports kiye ho use import kro aur use ek variable me store kro 
+
+ex 
+
+const app = require("./src/app")
+
+b. 
+app.listen(3000,()=>{
+    console.log("app are on the port no. 3000")
+})
+
+
+
+app.use(express.json())// meduleware
+
+
+CLUSTER - > storage + processor
+Database 
+
+* ek CLUSTER k ander bahut saare database ho sakte hai
+
+*data store hota hai database k ander database store hota hai CLUSTER k anddar aur ek CLUSTER multiple database contain kr sakta hai 
+
+cloud => Mongodb Atlas
